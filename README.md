@@ -41,7 +41,7 @@ Abaixo está descrita a estrutura da arquitetura proposta, dividida em component
 |  Serviço   |  |    Serviço     |  |  Serviço   |  |   Serviço     |  |  Serviço   |
 | Admin      |  | Notificações   |  | Check-in   |  | Validação Doc |  |  Preços    |
 +------------+  +----------------+  +------------+  +--------------+  +------------+
-
+```
 
 
 ### 🔹 Componentes Internos
@@ -61,48 +61,6 @@ Abaixo está descrita a estrutura da arquitetura proposta, dividida em component
 * **API de Pagamentos**: realiza a cobrança do cliente via cartão ou boleto.
 * **API de E-mail**: envia confirmações de reserva para os clientes.
 * **API de Validação de Documentos**: valida documentos como CPF ou passaporte.
-
----
-
-### 🌐 Como montar o diagrama de componentes:
-
-1. Acesse o site [https://app.diagrams.net](https://app.diagrams.net) ou [Lucidchart](https://www.lucidchart.com)
-2. Selecione "UML > Component Diagram"
-3. Use caixas rotuladas para representar componentes:
-
-   * Frontend Web/App
-   * Cadastro de Usuário
-   * Reserva de Voos
-   * etc.
-4. Conecte os componentes com **setas unidirecionais** (chamadas via API)
-5. Agrupe os serviços externos do lado direito com rótulo **Serviços SOA**
-6. Destaque o **API Gateway** no centro, como ponto de integração principal
-
-### 🖊️ Exemplo (descrição textual do diagrama):
-
-```
-[Frontend Web/App]
-      |
-      v
-[API Gateway]
-  |      |        |         |         |
-  v      v        v         v         v
-[Cadastro de Usuário]
-[Reserva de Voos]
-[Gestão de Voos]
-[Gestão de Assentos]
-[Banco de Dados Principal]
-
------- SERVIÇOS EXTERNOS (SOA) -------
-        |      |      |       |
-        v      v      v       v
-[API de Localização]
-[API de Pagamento]
-[API de Preços]
-[API de E-mail]
-```
-
----
 
 ## 2. Requisitos Não Funcionais
 
